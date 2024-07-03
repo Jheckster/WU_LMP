@@ -46,6 +46,35 @@ title(main="Plot of SIMS versus GRIP")
 ```
 
 
+## Predictions
+
+```{r}
+new <- data.frame(ARM=88, GRIP=94)
+```
+
+```{r}
+predict(model2,new,interval="prediction")
+```
+
+## Regression Model 3
+
+```{r}
+model3 <- lm(SIMS~ARM+GRIP, data=data)
+plot(SIMS~ARM+GRIP, data=data)
+abline(model3)
+summary.lm(model3)
+title(main="Plot of SIMS versus GRIP and ARM")
+```
+
+## Predictions
+
+```{r}
+new <- data.frame(ARM=88, GRIP=94)
+```
+
+```{r}
+predict(model3,new,interval="prediction")
+```
 
 
 ## Inferential Data
