@@ -56,7 +56,7 @@ new <- data.frame(ARM=88, GRIP=94)
 predict(model2,new,interval="prediction")
 ```
 
-## Regression Model 3
+## Regression Model Three
 
 ```{r}
 model3 <- lm(SIMS~ARM+GRIP, data=data)
@@ -76,6 +76,10 @@ new <- data.frame(ARM=88, GRIP=94)
 predict(model3,new,interval="prediction")
 ```
 
+## Model 1 and Model 3 Comparison 
+
+
+
 
 ## Inferential Data
 
@@ -83,6 +87,8 @@ predict(model3,new,interval="prediction")
 model1 <- aov(SIMS~ARM,data=data)
 summary.aov(model1)
 ```
+
+## Discussion and Conclusion
 
 
 
