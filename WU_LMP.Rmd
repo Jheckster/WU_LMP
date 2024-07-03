@@ -16,12 +16,14 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ## Regression Model One
 
-```{r cars}
+```{r}
 model1 <- lm(SIMS~ARM, data=data)
 plot(SIMS~ARM, data=data)
 abline(model1)
 summary.lm(model1)
+title(main="Plot of SIMS versus ARM")
 ```
+
 
 ## Predictions
 
@@ -33,4 +35,25 @@ new <- data.frame(ARM=88, GRIP=94)
 predict(model1,new,interval="prediction")
 ```
   
+## Regression Model Two
+
+```{r}
+model2 <- lm(SIMS~GRIP, data=data)
+plot(SIMS~GRIP, data=data)
+abline(model2)
+summary.lm(model2)
+title(main="Plot of SIMS versus GRIP")
+```
+
+
+
+
+## Inferential Data
+
+```{r}
+model1 <- aov(SIMS~ARM,data=data)
+summary.aov(model1)
+```
+
+
 
