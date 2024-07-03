@@ -76,15 +76,31 @@ new <- data.frame(ARM=88, GRIP=94)
 predict(model3,new,interval="prediction")
 ```
 
-## Model 1 and Model 3 Comparison 
 
 
+## Model Comparison Using Anova
+  
+Comparing Model 1 to Model 3
+```{r}
+anova(model1, model3)
+```
+  
+Comparing Model 2 to Model 3  
+```{r}
+anova(model2, model3)
+```
+
+Informal Comparison
+Comparing model 1 to model 2
+```{r}
+anova(model1, model2)
+```
 
 
 ## Inferential Data
 
 ```{r}
-model1 <- aov(SIMS~ARM,data=data)
+model1 <- aov(SIMS~ARM+GRIP,data=data)
 summary.aov(model1)
 ```
 
