@@ -106,5 +106,7 @@ summary.aov(model1)
 
 ## Discussion and Conclusion
 
-
+  The analysis of each Anova comparison shows us differences in SIMS when it is graphed and displayed. In our first comparison model, the RSS differences of model1 is 217, model 3 has 188. In our second, the RSS difference of model 1 is now 243, model2 is now 188. In the informal comparison, the comparison RSS is 188 for model 1 and 243 for model 2. 
+  
+  This data is tied to our original models 1 through 3. The "Model" in each comparison represents the listed model data that was previously plotted. This data shows us that GRIP is not favored when compared to ARM. The p-value is telling of this information, .000000000000002, this number is almost non-existent suggesting a small inference. 
 
